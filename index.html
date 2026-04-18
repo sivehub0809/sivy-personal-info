@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Information Website</title>
+  <meta
+    name="description"
+    content="A personal information website with a sharp editorial layout, current focus areas, background, and contact links."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top">info.</a>
+      <nav class="nav">
+        <a href="#about">about</a>
+        <a href="#focus">focus</a>
+        <a href="#timeline">timeline</a>
+        <a href="#writing">writing</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal">
+        <p class="eyebrow">personal website / profile hub</p>
+        <h1 id="hero-heading"></h1>
+        <p id="hero-headline" class="hero-headline"></p>
+        <p id="hero-summary" class="hero-summary"></p>
+
+        <div class="hero-meta">
+          <div>
+            <span class="meta-label">based in</span>
+            <span id="hero-location" class="meta-value"></span>
+          </div>
+          <div>
+            <span class="meta-label">currently</span>
+            <span id="hero-status" class="meta-value"></span>
+          </div>
+        </div>
+
+        <div id="hero-links" class="hero-links"></div>
+      </section>
+
+      <section id="about" class="content-grid reveal">
+        <div class="section-label">about</div>
+        <div class="section-body">
+          <p id="about-text" class="lead"></p>
+          <div class="quote-card">
+            <span class="quote-mark">"</span>
+            <p id="guiding-note"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="focus" class="content-grid reveal">
+        <div class="section-label">current focus</div>
+        <div class="section-body">
+          <div id="focus-list" class="stack-list"></div>
+        </div>
+      </section>
+
+      <section id="timeline" class="content-grid reveal">
+        <div class="section-label">selected timeline</div>
+        <div id="timeline-list" class="section-body timeline-list"></div>
+      </section>
+
+      <section id="writing" class="content-grid reveal">
+        <div class="section-label">writing / notes</div>
+        <div class="section-body">
+          <p class="section-intro">
+            A few short ideas, projects, or essays worth pointing people to.
+          </p>
+          <div id="writing-list" class="writing-list"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="content-grid reveal">
+        <div class="section-label">contact</div>
+        <div class="section-body contact-panel">
+          <p id="contact-text" class="lead"></p>
+          <div id="contact-links" class="hero-links"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
