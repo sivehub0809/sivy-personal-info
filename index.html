@@ -22,7 +22,10 @@
     <div class="ambient ambient-two"></div>
 
     <header class="topbar">
-      <a class="brand" href="#top">info.</a>
+      <a class="brand" href="#top">
+        <img class="brand-logo" src="assets/logo.jpg" alt="Eang Siv Y logo">
+        <span class="brand-text">siv y.</span>
+      </a>
       <nav class="nav">
         <a href="#about">about</a>
         <a href="#focus">focus</a>
@@ -34,23 +37,33 @@
 
     <main id="top">
       <section class="hero reveal">
-        <p class="eyebrow">personal website / profile hub</p>
-        <h1 id="hero-heading"></h1>
-        <p id="hero-headline" class="hero-headline"></p>
-        <p id="hero-summary" class="hero-summary"></p>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">personal website / profile hub</p>
+            <h1 id="hero-heading"></h1>
+            <p id="hero-headline" class="hero-headline"></p>
+            <p id="hero-summary" class="hero-summary"></p>
 
-        <div class="hero-meta">
-          <div>
-            <span class="meta-label">based in</span>
-            <span id="hero-location" class="meta-value"></span>
+            <div class="hero-meta">
+              <div>
+                <span class="meta-label">based in</span>
+                <span id="hero-location" class="meta-value"></span>
+              </div>
+              <div>
+                <span class="meta-label">currently</span>
+                <span id="hero-status" class="meta-value"></span>
+              </div>
+            </div>
+
+            <div id="hero-links" class="hero-links"></div>
           </div>
-          <div>
-            <span class="meta-label">currently</span>
-            <span id="hero-status" class="meta-value"></span>
+          <div class="hero-media">
+            <div class="hero-photo-shell">
+              <img class="hero-photo" src="assets/logo.jpg" alt="Portrait logo for Eang Siv Y">
+            </div>
+            <p class="hero-caption">founder, builder, operator</p>
           </div>
         </div>
-
-        <div id="hero-links" class="hero-links"></div>
       </section>
 
       <section id="about" class="content-grid reveal">

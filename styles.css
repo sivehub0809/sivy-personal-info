@@ -87,8 +87,24 @@ a {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 0.95rem;
   font-weight: 700;
+}
+
+.brand-logo {
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 26, 23, 0.1);
+  box-shadow: 0 10px 24px rgba(70, 42, 24, 0.12);
+}
+
+.brand-text {
+  display: inline-block;
 }
 
 .nav {
@@ -112,6 +128,50 @@ main {
 .hero {
   position: relative;
   padding: clamp(3rem, 8vw, 7rem) 0 4rem;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-media {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.hero-photo-shell {
+  width: min(100%, 24rem);
+  aspect-ratio: 1 / 1;
+  padding: 0.9rem;
+  border-radius: 2rem;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 244, 0.92), rgba(236, 226, 210, 0.86));
+  border: 1px solid rgba(31, 26, 23, 0.08);
+  box-shadow: 0 24px 70px rgba(70, 42, 24, 0.14);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  display: block;
+}
+
+.hero-caption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
 }
 
 .eyebrow {
@@ -364,15 +424,70 @@ main {
   .topbar {
     align-items: flex-start;
     flex-direction: column;
+    padding: 1rem 1rem 0.85rem;
   }
 
   .nav {
     justify-content: flex-start;
+    gap: 0.75rem 0.9rem;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
   }
 
   .content-grid {
     grid-template-columns: 1fr;
     gap: 0.8rem;
+    padding: 1.5rem 0;
+  }
+
+  main {
+    width: min(1120px, calc(100% - 1.2rem));
+    padding: 1rem 0 4rem;
+  }
+
+  .hero {
+    padding: 2rem 0 2.4rem;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-media {
+    order: -1;
+    justify-items: flex-start;
+  }
+
+  .hero-photo-shell {
+    width: min(100%, 16rem);
+    padding: 0.6rem;
+    border-radius: 1.4rem;
+  }
+
+  .hero-photo {
+    border-radius: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 15vw, 4.2rem);
+    max-width: none;
+  }
+
+  .hero-headline {
+    font-size: 1.05rem;
+  }
+
+  .hero-summary,
+  .lead,
+  .section-intro,
+  .timeline-copy,
+  .writing-card p,
+  .contact-value {
+    font-size: 0.98rem;
+    line-height: 1.7;
   }
 
   .contact-grid {
@@ -391,5 +506,16 @@ main {
   .contact-card {
     grid-template-columns: 1fr;
     gap: 0.45rem;
+    padding: 1rem 1.05rem;
+  }
+
+  .focus-card,
+  .timeline-item,
+  .writing-card {
+    padding: 1rem;
+  }
+
+  .quote-card {
+    padding: 1rem 1rem 1rem 1.5rem;
   }
 }
