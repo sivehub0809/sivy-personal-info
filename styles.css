@@ -306,6 +306,49 @@ main {
   padding-bottom: 1rem;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(31, 26, 23, 0.1);
+  border-radius: 1.2rem;
+  background: rgba(255, 251, 244, 0.66);
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.contact-card:hover,
+.contact-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(166, 72, 44, 0.3);
+  background: rgba(255, 251, 244, 0.92);
+}
+
+.contact-kind {
+  color: #7b8493;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  min-width: 0;
+  color: #4b4f59;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -332,6 +375,10 @@ main {
     gap: 0.8rem;
   }
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-meta,
   .timeline-header {
     grid-template-columns: 1fr;
@@ -339,5 +386,10 @@ main {
 
   .timeline-header {
     display: grid;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
   }
 }

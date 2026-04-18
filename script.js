@@ -53,12 +53,39 @@ const profile = {
     }
   ],
   contactText:
-    "If you're building something meaningful, want to talk startups, or see ways AI can simplify real business workflows, I'm always open to a good conversation.",
+    "If you want to build, collaborate, or talk about startups, AI, logistics, and product execution, these are the best places to reach me.",
   links: [
     { label: "currently", href: "#timeline" },
     { label: "nilaa", href: "#timeline" },
     { label: "about", href: "#about" },
     { label: "contact", href: "#contact" }
+  ],
+  contactLinks: [
+    {
+      label: "Email",
+      value: "eangsivy8@gmail.com",
+      href: "mailto:eangsivy8@gmail.com"
+    },
+    {
+      label: "LinkedIn",
+      value: "linkedin.com/in/eang-siv-y",
+      href: "https://www.linkedin.com/in/eang-siv-y"
+    },
+    {
+      label: "GitHub",
+      value: "github.com/sivehub0809",
+      href: "https://github.com/sivehub0809"
+    },
+    {
+      label: "Twitter",
+      value: "x.com/eangy25765",
+      href: "https://x.com/eangy25765"
+    },
+    {
+      label: "Nilaa",
+      value: "trynilaa.com",
+      href: "https://trynilaa.com"
+    }
   ]
 };
 
@@ -79,6 +106,21 @@ const createLink = ({ label, href }) => {
   return link;
 };
 
+const createContactCard = ({ label, value, href }) => {
+  const link = document.createElement("a");
+  link.className = "contact-card";
+  link.href = href;
+  link.innerHTML = `
+    <span class="contact-kind">${label}</span>
+    <span class="contact-value">${value}</span>
+  `;
+  if (/^https?:\/\//.test(href) || href.startsWith("mailto:")) {
+    link.target = "_blank";
+    link.rel = "noreferrer";
+  }
+  return link;
+};
+
 const render = () => {
   document.title = `${profile.name} | Personal Website`;
 
@@ -92,10 +134,8 @@ const render = () => {
   setText("contact-text", profile.contactText);
 
   const heroLinks = document.getElementById("hero-links");
-  const contactLinks = document.getElementById("contact-links");
   profile.links.forEach((item) => {
     heroLinks.appendChild(createLink(item));
-    contactLinks.appendChild(createLink(item));
   });
 
   const focusList = document.getElementById("focus-list");
@@ -134,6 +174,11 @@ const render = () => {
     links.appendChild(createLink({ label: "open", href: item.link }));
     card.appendChild(links);
     writingList.appendChild(card);
+  });
+
+  const contactGrid = document.getElementById("contact-grid");
+  profile.contactLinks.forEach((item) => {
+    contactGrid.appendChild(createContactCard(item));
   });
 };
 
