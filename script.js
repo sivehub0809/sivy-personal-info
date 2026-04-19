@@ -19,7 +19,7 @@ const translations = {
     previous: [
       "Founded DeeVork, a professional service marketplace for freelancers and experts. Within four weeks, we had 35 users and 20 active freelancers.",
       "Co-founded Moostrum, a colostrum milk powder brand that sold several packages on launch day.",
-      "Did research in an architecture fundamentals community with nearly 1,000 members.",
+      "Did research in an architecture fundamentals community with nearly 6,000 members.",
       "Started at 14 by designing banners and product visuals for my family's reselling business."
     ],
     contactCopy:
