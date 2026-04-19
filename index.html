@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Manrope:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Manrope:wght@400;500;600&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+Khmer:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
@@ -24,11 +24,19 @@
         <img class="brand-icon" src="assets/logo.jpg" alt="Capybara website icon">
         <span class="brand-name">siv y</span>
       </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#current">current</a>
-        <a href="#previous">previous</a>
-        <a href="#contact">contact</a>
-      </nav>
+      <div class="header-tools">
+        <nav class="site-nav" aria-label="Primary">
+          <a id="nav-current" href="#current">current</a>
+          <a id="nav-previous" href="#previous">previous</a>
+          <a id="nav-contact" href="#contact">contact</a>
+        </nav>
+        <div class="language-switcher" aria-label="Language switcher">
+          <button class="lang-button is-active" data-lang="en" type="button">EN</button>
+          <button class="lang-button" data-lang="km" type="button">KH</button>
+          <button class="lang-button" data-lang="zh" type="button">ZH</button>
+          <button class="lang-button" data-lang="ja" type="button">JA</button>
+        </div>
+      </div>
     </header>
 
     <section class="intro-block">
@@ -43,17 +51,17 @@
     </section>
 
     <section class="content-block" id="current">
-      <h2>currently</h2>
+      <h2 id="current-heading">currently</h2>
       <p id="current-copy"></p>
     </section>
 
     <section class="content-block" id="previous">
-      <h2>previously</h2>
+      <h2 id="previous-heading">previously</h2>
       <ul class="simple-list" id="previous-list"></ul>
     </section>
 
     <section class="content-block" id="contact">
-      <h2>contact</h2>
+      <h2 id="contact-heading">contact</h2>
       <p class="contact-copy" id="contact-copy"></p>
       <div class="contact-links" id="contact-links"></div>
     </section>
