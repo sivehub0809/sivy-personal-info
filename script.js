@@ -1,14 +1,14 @@
 const sharedContent = {
   experienceLogos: [
     { id: "nilaa", logoPath: "assets/brands/nilaa.jpg", fallback: "N", link: "https://trynilaa.com" },
-    { id: "deevork", logoPath: "assets/brands/deevork.jpg", fallback: "D", link: "" },
-    { id: "moostrum", logoPath: "assets/brands/moostrum.jpg", fallback: "M", link: "" },
-    { id: "architecture", logoPath: "assets/brands/students-a.jpg", fallback: "AR", link: "" },
-    { id: "family", logoPath: "", fallback: "FB", link: "" }
+    { id: "deevork", logoPath: "assets/brands/deevork.jpg", fallback: "D", link: "#contact" },
+    { id: "moostrum", logoPath: "assets/brands/moostrum.jpg", fallback: "M", link: "#contact" },
+    { id: "architecture", logoPath: "assets/brands/students-a.jpg", fallback: "AR", link: "#contact" },
+    { id: "family", logoPath: "", fallback: "FB", link: "#contact" }
   ],
   educationLogos: [
-    { id: "launchpad", logoPath: "", fallback: "2080", link: "" },
-    { id: "self", logoPath: "", fallback: "SY", link: "" }
+    { id: "launchpad", logoPath: "", fallback: "2080", link: "#education" },
+    { id: "self", logoPath: "", fallback: "SY", link: "https://www.linkedin.com/in/eang-siv-y" }
   ],
   contactLinks: [
     { value: "eangsivy8@gmail.com", href: "mailto:eangsivy8@gmail.com" },
@@ -336,20 +336,31 @@ const setText = (id, value) => {
 };
 
 const createLogoNode = (logoMeta, label) => {
-  const wrapper = document.createElement("div");
-  wrapper.className = "timeline-logo";
+  const wrapper = document.createElement("a");
+  wrapper.className = "timeline-logo-link";
+  wrapper.href = logoMeta.link || "#contact";
+  wrapper.setAttribute("aria-label", `Open ${label}`);
+
+  if (/^https?:\/\//.test(wrapper.href)) {
+    wrapper.target = "_blank";
+    wrapper.rel = "noreferrer";
+  }
+
+  const badge = document.createElement("div");
+  badge.className = "timeline-logo";
 
   if (logoMeta.logoPath) {
     const image = document.createElement("img");
     image.src = logoMeta.logoPath;
     image.alt = `${label} logo`;
-    wrapper.appendChild(image);
+    badge.appendChild(image);
   } else {
     const fallback = document.createElement("span");
     fallback.textContent = logoMeta.fallback;
-    wrapper.appendChild(fallback);
+    badge.appendChild(fallback);
   }
 
+  wrapper.appendChild(badge);
   return wrapper;
 };
 

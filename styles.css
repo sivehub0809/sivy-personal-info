@@ -132,6 +132,18 @@ button {
   padding-top: 0.1rem;
 }
 
+.avatar-link,
+.timeline-logo-link {
+  display: inline-flex;
+  border-radius: 999px;
+}
+
+.avatar-link:focus-visible,
+.timeline-logo-link:focus-visible {
+  outline: 2px solid #4d74ff;
+  outline-offset: 3px;
+}
+
 .avatar-image {
   width: 4.7rem;
   height: 4.7rem;
@@ -181,6 +193,12 @@ button {
   justify-content: center;
   overflow: hidden;
   flex-shrink: 0;
+}
+
+.timeline-logo-link:hover .timeline-logo,
+.timeline-logo-link:focus-visible .timeline-logo {
+  border-color: #d8d8d8;
+  transform: translateY(-1px);
 }
 
 .timeline-logo img {
