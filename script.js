@@ -1,13 +1,13 @@
 const sharedContent = {
   experienceLogos: [
-    { id: "nilaa", logoPath: "assets/brands/nilaa.jpg", fallback: "N", link: "https://trynilaa.com" },
-    { id: "deevork", logoPath: "assets/brands/deevork.jpg", fallback: "D", link: "#contact" },
-    { id: "moostrum", logoPath: "assets/brands/moostrum.jpg", fallback: "M", link: "#contact" },
-    { id: "architecture", logoPath: "assets/brands/students-a.jpg", fallback: "AR", link: "#contact" },
-    { id: "family", logoPath: "", fallback: "FB", link: "#contact" }
+    { id: "nilaa", logoPath: "assets/brands/students-a.jpg", fallback: "N", link: "https://trynilaa.com/" },
+    { id: "deevork", logoPath: "assets/brands/nilaa.jpg", fallback: "D", link: "https://deevork.lovable.app/" },
+    { id: "moostrum", logoPath: "assets/brands/deevork.jpg", fallback: "M", link: "https://www.instagram.com/moostrum_kh/" },
+    { id: "architecture", logoPath: "assets/brands/moostrum.jpg", fallback: "AR", link: "https://t.me/KhmerStudentsArchi" },
+    { id: "family", logoPath: "", fallback: "DM", link: "https://www.tiktok.com/search?q=dmstarart&t=1773214577171" }
   ],
   educationLogos: [
-    { id: "launchpad", logoPath: "", fallback: "2080", link: "#education" },
+    { id: "launchpad", logoPath: "assets/brands/2080ventures.jpg", fallback: "2080", link: "https://www.2080.ventures/" },
     { id: "self", logoPath: "", fallback: "SY", link: "https://www.linkedin.com/in/eang-siv-y" }
   ],
   contactLinks: [
@@ -69,10 +69,10 @@ const translations = {
         logoId: "architecture"
       },
       {
-        company: "Family Business",
+        company: "Dmstar Art",
         role: "Designer",
         summary:
-          "Designed banners and product visuals for our family's reselling business. This is where I learned the basics.",
+          "Designed banners and product visuals for our family business. This is where I learned the basics.",
         dateRange: "Started at 14",
         logoId: "family"
       }
@@ -144,7 +144,7 @@ const translations = {
         logoId: "architecture"
       },
       {
-        company: "Family Business",
+        company: "Dmstar Art",
         role: "Designer",
         summary:
           "រចនាបដា និងរូបភាពផលិតផលសម្រាប់អាជីវកម្ម reselling របស់គ្រួសារ។ នេះជាកន្លែងដែលខ្ញុំរៀនមូលដ្ឋានដំបូង។",
@@ -219,7 +219,7 @@ const translations = {
         logoId: "architecture"
       },
       {
-        company: "Family Business",
+        company: "Dmstar Art",
         role: "Designer",
         summary:
           "为家里的转售生意设计横幅和产品视觉。这是我最早学习基础技能的地方。",
@@ -294,7 +294,7 @@ const translations = {
         logoId: "architecture"
       },
       {
-        company: "Family Business",
+        company: "Dmstar Art",
         role: "Designer",
         summary:
           "家族の reselling business のためにバナーや商品ビジュアルを制作。ここが私の原点です。",
