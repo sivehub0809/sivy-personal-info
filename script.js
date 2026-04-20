@@ -1,13 +1,13 @@
 const sharedContent = {
   experienceLogos: [
-    { id: "nilaa", logoPath: "", fallback: "N", link: "https://trynilaa.com" },
-    { id: "deevork", logoPath: "", fallback: "D", link: "" },
-    { id: "moostrum", logoPath: "", fallback: "M", link: "" },
-    { id: "architecture", logoPath: "", fallback: "AR", link: "" },
+    { id: "nilaa", logoPath: "assets/brands/nilaa.jpg", fallback: "N", link: "https://trynilaa.com" },
+    { id: "deevork", logoPath: "assets/brands/deevork.jpg", fallback: "D", link: "" },
+    { id: "moostrum", logoPath: "assets/brands/moostrum.jpg", fallback: "M", link: "" },
+    { id: "architecture", logoPath: "assets/brands/students-a.jpg", fallback: "AR", link: "" },
     { id: "family", logoPath: "", fallback: "FB", link: "" }
   ],
   educationLogos: [
-    { id: "launchpad", logoPath: "", fallback: "20", link: "" },
+    { id: "launchpad", logoPath: "", fallback: "2080", link: "" },
     { id: "self", logoPath: "", fallback: "SY", link: "" }
   ],
   contactLinks: [
@@ -32,6 +32,7 @@ const translations = {
     educationHeading: "Education",
     contactTag: "Contact",
     contactHeading: "Find me here",
+    essayLabel: "essays",
     contactCopy:
       "dm me by email, linkedin, github, x, or through nilaa. always open to talk about ai, startups, logistics, and building in cambodia.",
     experience: [
@@ -106,6 +107,7 @@ const translations = {
     educationHeading: "ការសិក្សា",
     contactTag: "ទំនាក់ទំនង",
     contactHeading: "ស្វែងរកខ្ញុំទីនេះ",
+    essayLabel: "អត្ថបទ",
     contactCopy:
       "អ្នកអាចទាក់ទងខ្ញុំតាម email, linkedin, github, x ឬតាម nilaa។ ខ្ញុំតែងតែបើកចិត្តនិយាយអំពី ai, startups, logistics និងការសាងសង់នៅកម្ពុជា។",
     experience: [
@@ -180,6 +182,7 @@ const translations = {
     educationHeading: "教育",
     contactTag: "联系",
     contactHeading: "在这里找到我",
+    essayLabel: "文章",
     contactCopy:
       "你可以通过 email、linkedin、github、x 或 nilaa 联系我。我一直愿意聊 ai、创业、物流，以及在柬埔寨打造产品。",
     experience: [
@@ -254,6 +257,7 @@ const translations = {
     educationHeading: "教育",
     contactTag: "連絡",
     contactHeading: "ここで見つけてください",
+    essayLabel: "エッセイ",
     contactCopy:
       "email、linkedin、github、x、または nilaa から連絡できます。ai、スタートアップ、物流、そしてカンボジアでのものづくりについて話すのが好きです。",
     experience: [
@@ -429,6 +433,7 @@ const render = () => {
   setText("education-heading", copy.educationHeading);
   setText("contact-tag", copy.contactTag);
   setText("contact-heading", copy.contactHeading);
+  setText("essay-link", copy.essayLabel);
   setText("contact-copy", copy.contactCopy);
 
   renderTimeline("experience-list", copy.experience, sharedContent.experienceLogos);
